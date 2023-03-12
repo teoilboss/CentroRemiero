@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Centro Remiero</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<h1>Centro Remiero</h1>
-		<nav>
-			<ul>
-				<li><a href="#about">Chi siamo</a></li>
-				<li><a href="#services">Servizi</a></li>
-				<li><a href="#contact">Contatti</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<section id="about">
-			<h2>Chi siamo</h2>
-			<p>Il Centro Remiero è una società che si occupa della promozione della canoa e della vogata in generale. Abbiamo una vasta gamma di servizi, tra cui lezioni di canoa per principianti e avanzati, noleggio di canoe e kayak, e organizzazione di eventi per gruppi e aziende.</p>
-		</section>
-
-		<section id="services">
-			<h2>Servizi</h2>
-			<ul>
-				<li>Lezioni di canoa</li>
-				<li>Noleggio canoe e kayak</li>
-				<li>Organizzazione di eventi</li>
-			</ul>
-		</section>
-
-		<section id="contact">
-			<h2>Contatti</h2>
-			<p>Centro Remiero</p>
-			<p>Via del Fiume, 123</p>
-			<p>12345 Città del Fiume (RM)</p>
-			<p>Tel. 0123 456789</p>
-			<p>Email: info@centroremiero.it</p>
-		</section>
-	</main>
-
-	<footer>
-		<p>Copyright © Centro Remiero</p>
-	</footer>
-</body>
+  <head>
+    <title>Centro Remiero</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+      }
+      nav a:hover {
+        color: #0077c2;
+      }
+      header {
+        background-color: #0077c2;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      main {
+        padding: 20px;
+        text-align: left;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      ul {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: 30px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #0077c2;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: #004e80;
+      }
+      footer {
+        background-color: #eee;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Centro Remiero</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Servizi</a></li>
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Benvenuti al nostro centro remiero</h2>
+        <p>Offriamo una vasta gamma di servizi per appassionati di canottaggio, dai principianti ai professionisti. I nostri istruttori altamente qualificati sono pronti ad aiutare a raggiungere i tuoi obiettivi.</p>
+        <a href="#" class="cta-button">Scopri i nostri servizi</a>
+      </section>
+      <section>
+        <h2>Perché scegliere il nostro centro remiero?</h2>
+        <ul>
+          <li>Insegnanti altamente qualificati</li>
+          <li>Attrezzature moderne e di alta qualità</li>
+          <li>Corsi per principianti e avanzati</li>
+          <li>Prezzi convenienti</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 Centro Remiero. Tutti i diritti riservati.</p>
+    </footer>
+  </body>
 </html>
