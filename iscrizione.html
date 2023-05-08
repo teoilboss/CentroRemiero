@@ -1,0 +1,91 @@
+<html>
+<title>
+
+</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+    h1 {
+		margin-top: 50px;
+		text-align: center;
+		color: #333;
+	}
+
+	form {
+		margin-top: 0px;
+		background-color: #fff;
+		padding: 150px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	label {
+		display: block;
+		margin-top: 50px;
+		font-size: 25px;
+		color: #333;
+		text-align: left;
+	}
+
+	input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
+		width: 100%;
+		padding: 10px;
+		border: none;
+		border-radius: 5px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		font-size: 16px;
+		margin-top: 5px;
+	}
+
+	input[type="radio"] {
+		margin-right: 10px;
+	}
+
+	input[type="submit"] {
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #3e8e41;
+	}
+</style>
+
+<body>
+<form>
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome"><br>    
+<label for="cognome">Cognome:</label><br>
+<input type="text" id="cognome" name="cognome"><br>
+
+<label for="telefono">Numero di telefono:</label><br>
+<input type="tel" id="telefono" name="telefono"><br>
+
+<label for="email">E-mail:</label><br>
+<input type="email" id="email" name="email"><br>
+
+<label for="sesso">Sesso:</label><br>
+<input type="radio" id="sesso" name="sesso" value="maschio">Maschio<br>
+<input type="radio" id="sesso" name="sesso" value="femmina">Femmina<br>
+<input type="radio" id="sesso" name="sesso" value="altro">Altro<br>
+
+<label for="eta">Età:</label><br>
+<input type="number" id="eta" name="eta"><br><br>
+
+<input type="submit" value="Iscriviti">
+</form>
+</body>
+
+</html>
