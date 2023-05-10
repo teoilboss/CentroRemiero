@@ -1,3 +1,4 @@
+// Funzione per impostare un cookie
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -8,6 +9,7 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
   
+  // Funzione per ottenere il valore di un cookie
   function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -19,17 +21,24 @@ function setCookie(name, value, days) {
     return null;
   }
   
-  document.addEventListener("DOMContentLoaded", function() {
-    var cookiePopup = document.getElementById('cookie-popup');
-    var cookieAccept = document.getElementById('cookie-accept');
+  // Funzione per mostrare il messaggio dei cookies
+  function showCookiesMessage() {
+    var cookiesMessage = document.createElement('div');
+    cookiesMessage.setAttribute('id', 'cookies-message');
+    cookiesMessage.innerHTML = '<p>Questo sito utilizza i cookies per garantire la migliore esperienza utente. Continuando a navigare su questo sito, accetti il nostro utilizzo dei cookie. <a href="#" onclick="acceptCookies()">Accetta i cookies</a></p>';
   
-    if (!getCookie('cookies-accepted')) {
-      cookiePopup.style.display = 'block';
-    }
+    document.body.appendChild(cookiesMessage);
+  }
   
-    cookieAccept.addEventListener('click', function() {
-      setCookie('cookies-accepted', 'true', 365);
-      cookiePopup.style.display = 'none';
-    });
-  });
+  // Funzione per accettare i cookies
+  function acceptCookies() {
+    setCookie('cookies-accepted', 'true', 365);
+    var cookiesMessage = document.getElementById('cookies-message');
+    cookiesMessage.parentNode.removeChild(cookiesMessage);
+  }
+  
+  // Mostra il messaggio dei cookies solo se non sono già stati accettati
+  if (!getCookie('cookies-accepted')) {
+    showCookiesMessage();
+  }
   
