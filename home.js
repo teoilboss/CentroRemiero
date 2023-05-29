@@ -1,4 +1,4 @@
-// Funzione per impostare un cookie
+
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -8,8 +8,6 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
-  
-  // Funzione per ottenere il valore di un cookie
   function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -20,8 +18,6 @@ function setCookie(name, value, days) {
     }
     return null;
   }
-  
-  // Funzione per mostrare il messaggio dei cookies
   function showCookiesMessage() {
     var cookiesMessage = document.createElement('div');
     cookiesMessage.setAttribute('id', 'cookies-message');
@@ -29,15 +25,15 @@ function setCookie(name, value, days) {
   
     document.body.appendChild(cookiesMessage);
   }
-  
-  // Funzione per accettare i cookies
+
+
+
+
   function acceptCookies() {
     setCookie('cookies-accepted', 'true', 365);
     var cookiesMessage = document.getElementById('cookies-message');
     cookiesMessage.parentNode.removeChild(cookiesMessage);
   }
-  
-  // Mostra il messaggio dei cookies solo se non sono già stati accettati
   if (!getCookie('cookies-accepted')) {
     showCookiesMessage();
   }
